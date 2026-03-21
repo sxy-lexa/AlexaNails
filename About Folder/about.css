@@ -1,0 +1,112 @@
+/* Nav Bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--light-brown), var(--white));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+  }
+  
+  ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent);
+    pointer-events: none;
+  }
+  
+  li {
+    float: left;
+    position: relative;
+  }
+  
+  li a {
+    display: block;
+    color: var(--cream);
+    text-align: center;
+    padding: 18px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+  
+  li a:hover {
+    color: var(--medium-brown);
+    transform: translateY(-2px);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--medium-brown);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  li a:hover::after {
+    width: 100%;
+  }
+
+  li i {
+    color: var(--cream);
+    font-size: 28px;
+    padding: 0 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+  
+  li i:hover {
+    color: var(--medium-brown);
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(205, 133, 63, 0.5);
+  }
+
+  body {
+    font-family: Times, Times New Roman, serif;
+    color: var(--dark-brown);
+  background-image: url(./assets/megan.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color:var(--cream);
+  padding: 0px;
+  margin: 0px;
+  }
+
+  
+:root{
+--white: #ffffff;
+--light-brown: #c4a484;
+--brown: #a0522d;
+--dark-brown: #654321;
+}
+
+html{
+  padding:0px;
+  margin: 0px;
+}
+
+
+
+/* page*/
+
+
+

@@ -1,0 +1,538 @@
+/* Nav Bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--light-brown), var(--white));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+  }
+  
+  ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent);
+    pointer-events: none;
+  }
+  
+  li {
+    float: left;
+    position: relative;
+  }
+  
+  li a {
+    display: block;
+    color: var(--cream);
+    text-align: center;
+    padding: 18px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+  
+  li a:hover {
+    color: var(--medium-brown);
+    transform: translateY(-2px);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--medium-brown);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  li a:hover::after {
+    width: 100%;
+  }
+
+  li i {
+    color: var(--cream);
+    font-size: 28px;
+    padding: 0 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+  
+  li i:hover {
+    color: var(--medium-brown);
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(205, 133, 63, 0.5);
+  }
+
+  body {
+    font-family: Times, Times New Roman, serif;
+    color: var(--dark-brown);
+  background-image: url(./assets/megan.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color:var(--cream);
+  padding: 0px;
+  margin: 0px;
+  }
+
+  
+:root{
+--white: #ffffff;
+--light-brown: #c4a484;
+--brown: #a0522d;
+--dark-brown: #654321;
+}
+
+html{
+  padding:0px;
+  margin: 0px;
+}
+
+
+
+/* page */
+
+
+
+/* reset and ensure no unexpected page offset */
+body {
+    margin: 0;
+}
+
+
+/* Carousel Styles */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 60px); /* Adjust based on nav height */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  left: 0;
+}
+
+
+.carousel-inner {
+  display: flex;
+  width: 400%; /* 4 slides */
+  height: 100%;
+  transition: transform 0.5s ease; /* Smooth transition */
+  position: relative;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+.slide {
+  width: 25%; /* 100% / 4 */
+  height: 100%;
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+
+.slide-image {
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.slide-text {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--beige), var(--light-brown));
+  color: var(--dark-brown);
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+
+.slide-text h3,
+.slide-text h1,
+.slide-text p,
+.slide-text .carousel-btn {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.slide-text h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 1rem 0;
+  font-weight: 400;
+}
+
+
+.slide-text h1 {
+  font-size: 50px;
+  line-height: 55px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 0 0 1rem 0;
+}
+
+
+.slide-text p {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 2rem 0;
+}
+
+
+.carousel-btn {
+  background: var(--medium-brown);
+  border: 2px solid var(--medium-brown);
+  color: var(--cream);
+  padding: 1rem 2rem;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.carousel-btn:hover {
+  background: transparent;
+  color: var(--medium-brown);
+}
+
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(205, 133, 63, 0.8);
+  border: none;
+  color: var(--cream);
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.carousel-arrow:hover {
+  background: var(--medium-brown);
+  transform: translateY(-50%) scale(1.1);
+}
+
+
+.left-arrow {
+  left: 20px;
+}
+
+
+.right-arrow {
+  right: 20px;
+}
+
+
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  z-index: 3;
+}
+
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(205, 133, 63, 0.5);
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+
+.dot.active {
+  background: var(--medium-brown);
+}
+
+
+/* center hero text horizontally and vertically */
+.hero_image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical centering */
+    align-items: center;     /* horizontal centering */
+    text-align: center;
+    height: calc(100vh - 60px); /* subtract approximate nav height; adjust 60px if needed */
+    padding: 2rem; /* breathing room on small screens */
+    box-sizing: border-box;
+    /* optional background settings if you add an image later */
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* optional: make headings visually balanced */
+.hero_image h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    color: var(--dark-brown);
+}
+.hero_image h2 {
+    margin: 0;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--light-brown);
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE STYLES
+   ========================================== */
+
+
+/* Tablet and smaller screens */
+@media screen and (max-width: 768px) {
+ 
+  /* Navigation - stack vertically on mobile */
+  ul {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+ 
+  ul > div:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+ 
+  li {
+    float: none;
+  }
+ 
+  li a {
+    padding: 12px 15px;
+  }
+ 
+  li i {
+    padding: 10px 15px;
+  }
+ 
+  /* Carousel - stack image and text vertically */
+  .carousel {
+    height: auto;
+    min-height: 500px;
+  }
+ 
+  .slide {
+    flex-direction: column;
+  }
+ 
+  .slide-image {
+    width: 100%;
+    height: 300px;
+  }
+ 
+  .slide-text {
+    width: 100%;
+    height: auto;
+    padding: 2rem 1.5rem;
+  }
+ 
+  .slide-text h3 {
+    font-size: 16px;
+  }
+ 
+  .slide-text h1 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+ 
+  .slide-text p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+ 
+  .carousel-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 14px;
+  }
+ 
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+ 
+  .left-arrow {
+    left: 10px;
+  }
+ 
+  .right-arrow {
+    right: 10px;
+  }
+ 
+  /* Hero section */
+  .hero_image {
+    height: auto;
+    min-height: 50vh;
+    padding: 3rem 1.5rem;
+  }
+}
+
+
+/* Mobile phones */
+@media screen and (max-width: 480px) {
+ 
+  li a {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+ 
+  li i {
+    font-size: 22px;
+    padding: 8px 12px;
+  }
+ 
+  .carousel {
+    min-height: 450px;
+  }
+ 
+  .slide-image {
+    height: 250px;
+  }
+ 
+  .slide-text {
+    padding: 1.5rem 1rem;
+  }
+ 
+  .slide-text h3 {
+    font-size: 14px;
+  }
+ 
+  .slide-text h1 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+ 
+  .slide-text p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+ 
+  .carousel-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 13px;
+  }
+ 
+  .carousel-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+ 
+  .left-arrow {
+    left: 5px;
+  }
+ 
+  .right-arrow {
+    right: 5px;
+  }
+ 
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+  }
+ 
+  .hero_image {
+    padding: 2rem 1rem;
+    min-height: 40vh;
+  }
+}
+
+
+/* Landscape orientation for mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+ 
+  .carousel {
+    height: auto;
+  }
+ 
+  .slide {
+    flex-direction: row;
+  }
+ 
+  .slide-image {
+    width: 50%;
+    height: 100vh;
+  }
+ 
+  .slide-text {
+    width: 50%;
+    height: 100vh;
+    padding: 1rem;
+  }
+ 
+  .slide-text h3 {
+    font-size: 14px;
+    margin: 0 0 0.5rem 0;
+  }
+ 
+  .slide-text h1 {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 0 0.5rem 0;
+  }
+ 
+  .slide-text p {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 0 1rem 0;
+  }
+ 
+  .hero_image {
+    min-height: 100vh;
+  }
+}
+
+
+

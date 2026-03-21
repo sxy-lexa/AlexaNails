@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexa Nails</title>
+    <link rel="stylesheet" href="code.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<script src="script.js"></script>
+ <!-- Nav Bar -->
+<ul>
+  <div>
+     <li><a href="../Home Folder/code.html">Home</a></li>
+    <li><a href="../Policy Folder/policy.html">Policy</a></li>
+    <li><a href="../Contact Folder/contact.html">Contact</a></li>
+    <li><a href="../About Folder/about.html">About</a></li>
+
+  </div>
+
+
+  </ul>
+
+  <!-- Carousel Hero -->
+  <div class="carousel">
+    <div class="carousel-inner">
+      <div class="slide">
+        <div class="slide-image" style="background-image: url('../assets/alessia.jpg');"></div>
+        <div class="slide-text">
+          <h3>Stunning Designs</h3>
+          <h1>Alessia's Masterpiece</h1>
+          <button class="carousel-btn">Explore More</button>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide-image" style="background-image: url('../assets/bella.jpg');"></div>
+        <div class="slide-text">
+          <h3>Elegant Styles</h3>
+          <h1>Bella's Elegance</h1>
+          <button class="carousel-btn">Shop Now</button>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide-image" style="background-image: url('../assets/Bellasnails.jpg');"></div>
+        <div class="slide-text">
+          <h3>Professional Quality</h3>
+          <h1>Bella's Nails Collection</h1>
+          <button class="carousel-btn">Get Started</button>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide-image" style="background-image: url('../assets/megan.jpg');"></div>
+        <div class="slide-text">
+          <h3>15% OFF NEW LOVE EDIT</h3>
+          <h1>Fall in Love with Color!</h1>
+          <button class="carousel-btn">Shop Now</button>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-arrow left-arrow">&#10094;</button>
+    <button class="carousel-arrow right-arrow">&#10095;</button>
+    <div class="carousel-dots">
+      <span class="dot active" data-slide="0"></span>
+      <span class="dot" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+      <span class="dot" data-slide="3"></span>
+    </div>
+  </div>
+
+  <!-- hero image -->
+   <div class="hero_image">
+    <!-- <img src="./assets/megan.jpg" alt=""> -->
+      <h1>Your New Nail Obsession Starts Here</h1>
+    <h2> Nails that slay. Styles that stay.
+Let’s get you looking extra fabulous.</h2>
+   </div>
+
+</body>
+<script>
+  const carouselInner = document.querySelector('.carousel-inner');
+  const dots = document.querySelectorAll('.dot');
+  const leftArrow = document.querySelector('.left-arrow');
+  const rightArrow = document.querySelector('.right-arrow');
+  let currentSlide = 0;
+  const totalSlides = 4;
+
+  function updateDots() {
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentSlide);
+    });
+  }
+
+  function goToSlide(slideIndex) {
+    currentSlide = slideIndex;
+    const translateX = -25 * currentSlide;
+    carouselInner.style.transform = `translateX(${translateX}%)`;
+    updateDots();
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    goToSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    goToSlide(currentSlide);
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      goToSlide(index);
+    });
+  });
+
+  leftArrow.addEventListener('click', prevSlide);
+  rightArrow.addEventListener('click', nextSlide);
+
+  // Auto slide every 10 seconds
+  setInterval(nextSlide, 20000);
+</script>
+</html>
