@@ -3,122 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alexa Nails</title>
+    <title>Alexa Nails - Home</title>
     <link rel="stylesheet" href="code.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<script src="script.js"></script>
- <!-- Nav Bar -->
+
+<!-- ==== Navigation Bar (Do not edit this as requested) ==== -->
 <ul>
   <div>
-     <li><a href="../Home Folder/code.html">Home</a></li>
+    <li><a href="../Home Folder/code.html">Home</a></li>
     <li><a href="../Policy Folder/policy.html">Policy</a></li>
     <li><a href="../Contact Folder/contact.html">Contact</a></li>
     <li><a href="../About Folder/about.html">About</a></li>
+  </div>
+</ul>
+<!-- ==== End of Navigation Bar ==== -->
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Nail Web</title>
+  <link rel="stylesheet" href="about.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============================================================
+       HERO — Full screen WHITE FLOWER video with fade-in text
+       ============================================================ -->
+  <section class="hero-video-section">
+
+    <!--
+      WHITE FLOWER VIDEO — Free from Pexels (royalty-free, no signup needed)
+      Streams directly so it works immediately in the browser.
+
+      FOR A LOCAL COPY (faster load, works offline):
+        1. Visit: https://www.pexels.com/video/time-lapse-video-of-flower-blooming-856019/
+        2. Download the HD version
+        3. Save as: assets/flower.mp4
+        4. Change the src below to: ../assets/flower.mp4
+    -->
+    <video class="hero-video" autoplay muted loop playsinline poster="../assets/bella.jpg">
+     <source src="../assets/5647333-uhd_3840_2160_25fps.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Soft warm-white overlay -->
+    <div class="hero-video-overlay"></div>
+
+    <!-- Fades in on page load -->
+    <div class="hero-video-content fade-in-hero">
+      <!-- EDIT: small label above the headline -->
+      <p class="hero-pre">WELCOME TO</p>
+      <!-- EDIT: main headline -->
+      <h1 class="hero-headline">Alexa Nails</h1>
+      <!-- EDIT: tagline -->
+      <p class="hero-tagline"> NAILS SO GOOD YOU MIGHT START TALKING WITH YOUR HANDS MORE </p>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       TICKER BAND
+       ============================================================ -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <!-- EDIT: change the repeated ticker text -->
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+      <span>NOW BOOKING</span><span class="dot">✦</span>
+    </div>
   </div>
 
 
-  </ul>
+  <!-- ============================================ ================
+       INTRO TEXT
+       ============================================================ -->
+  <section class="intro-section">
+    <!-- EDIT: small label -->
+    <p class="intro-label">NAIL ART &amp;  SERVICES</p>
+    <!-- EDIT: headline -->
+    <h2 class="intro-headline">Explore my Services</h2>
+    <!-- EDIT: description paragraph -->
+    <p class="intro-body">
+Prices may not be acurate, DM me for exact pricing and availability, these are estimates.
+    </p>
 
-  <!-- Carousel Hero -->
-  <div class="carousel">
-    <div class="carousel-inner">
-      <div class="slide">
-        <div class="slide-image" style="background-image: url('../assets/alessia.jpg');"></div>
-        <div class="slide-text">
-          <h3>Stunning Designs</h3>
-          <h1>Alessia's Masterpiece</h1>
-          <button class="carousel-btn">Explore More</button>
-        </div>
-      </div>
-      <div class="slide">
-        <div class="slide-image" style="background-image: url('../assets/bella.jpg');"></div>
-        <div class="slide-text">
-          <h3>Elegant Styles</h3>
-          <h1>Bella's Elegance</h1>
-          <button class="carousel-btn">Shop Now</button>
-        </div>
-      </div>
-      <div class="slide">
-        <div class="slide-image" style="background-image: url('../assets/Bellasnails.jpg');"></div>
-        <div class="slide-text">
-          <h3>Professional Quality</h3>
-          <h1>Bella's Nails Collection</h1>
-          <button class="carousel-btn">Get Started</button>
-        </div>
-      </div>
-      <div class="slide">
-        <div class="slide-image" style="background-image: url('../assets/megan.jpg');"></div>
-        <div class="slide-text">
-          <h3>15% OFF NEW LOVE EDIT</h3>
-          <h1>Fall in Love with Color!</h1>
-          <button class="carousel-btn">Shop Now</button>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-arrow left-arrow">&#10094;</button>
-    <button class="carousel-arrow right-arrow">&#10095;</button>
-    <div class="carousel-dots">
-      <span class="dot active" data-slide="0"></span>
-      <span class="dot" data-slide="1"></span>
-      <span class="dot" data-slide="2"></span>
-      <span class="dot" data-slide="3"></span>
-    </div>
-  </div>
 
-  <!-- hero image -->
-   <div class="hero_image">
-    <!-- <img src="./assets/megan.jpg" alt=""> -->
-      <h1>Your New Nail Obsession Starts Here</h1>
-    <h2> Nails that slay. Styles that stay.
-Let’s get you looking extra fabulous.</h2>
-   </div>
+  </section>
+
+
+  <!-- ============================================================
+       SERVICES GRID — 8 cards
+       ============================================================ -->
+  <section class="services-section">
+    <div class="services-grid">
+
+      <!-- ── SERVICE 1 ─────────────────────────────────── -->
+      <div class="service-card" data-number="01">
+        <div class="service-img-wrap">
+          <!-- EDIT: swap src for any image in your assets folder -->
+          <img src="../assets/nailart.jpeg" alt="Service 1" class="service-img" />
+        </div>
+        <div class="service-body">
+          <!-- EDIT: service name e.g. "Gel Manicure" -->
+          <h3 class="service-name">Detailed Nail Art</h3>
+          <!-- EDIT: short description -->
+          <p class="service-desc">Detailed nail art including intricate drawings, charaqcters, album covers, and 3D designs. Pricing varies based on complexity.</p>
+          <!-- EDIT: price — delete this whole line to hide pricing -->
+          <p class="service-price">Approximately $80+</p>
+        </div>
+      </div>
+
+      <!-- ── SERVICE 2 ─────────────────────────────────── -->
+      <div class="service-card" data-number="02">
+        <div class="service-img-wrap">
+          <img src="../assets/jocenails.jpg" alt="Service 2" class="service-img" />
+        </div>
+        <div class="service-body">
+          <h3 class="service-name">Acrylic</h3>
+          <p class="service-desc">Long-lasting acrylic nails start at $40. Designs and nail art are priced additionally.</p>
+          <p class="service-price">Starts at $40</p>
+        </div>
+      </div>
+
+      <!-- ── SERVICE 3 ─────────────────────────────────── -->
+      <div class="service-card" data-number="03">
+        <div class="service-img-wrap">
+          <img src="../assets/vickynails.jpeg" alt="Service 3" class="service-img" />
+        </div>
+        <div class="service-body">
+          <h3 class="service-name">Acrylic Fills</h3>
+          <p class="service-desc">Refill your acrylic nails with a fresh coat. Acrylic fills start at $25. Designs and nail art are priced additionally.</p>
+          <p class="service-price">Starts at $25</p>
+        </div>
+      </div>
+
+      <!-- ── SERVICE 4 ─────────────────────────────────── -->
+      <div class="service-card" data-number="04">
+        <div class="service-img-wrap">
+          <img src="../assets/jocelnails.jpeg" alt="Service 4" class="service-img" />
+        </div>
+        <div class="service-body">
+          <h3 class="service-name">Removals</h3>
+          <p class="service-desc">Professional removal of acrylic or gel nails.</p>
+          <p class="service-price">Starts at $10 & Forgin removals will be $15</p>
+        </div>
+      </div>
+
+      <!-- ── SERVICE 5 ─────────────────────────────────── -->
+      <div class="service-card" data-number="05">
+        <div class="service-img-wrap">
+          <img src="../assets/french.jpg" alt="Service 5" class="service-img" />
+        </div>
+        <div class="service-body">
+          <h3 class="service-name">French Tips</h3>
+          <p class="service-desc">Classic French tips with a polished finish. Will be same price any length and shape. Additional designs are priced additionally.</p>
+          <p class="service-price">Starts at $60</p>
+        </div>
+      </div>
+
+      <!-- ── SERVICE 6 ─────────────────────────────────── -->
+      <div class="service-card" data-number="06">
+        <div class="service-img-wrap">
+          <img src="../assets/chinonails.jpeg" alt="Service 6" class="service-img" />
+        </div>
+        <div class="service-body">
+          <h3 class="service-name">Manicures</h3>
+          <p class="service-desc">A classic Manicure including nail shaping, cuticle care, your choice of clear topcoat or Gel polish. Designs are available as an additional option can be priced additionally.</p>
+          <p class="service-price">Starts at $15</p>
+        </div>
+      </div>
+
+      <!-- ── SERVICE 7 ─────────────────────────────────── -->
+      <div class="service-card" data-number="07">
+        <div class="service-img-wrap">
+          <img src="../assets/rubberbase.jpeg" alt="Service 7" class="service-img" />
+        </div>
+        <div class="service-body">
+          <h3 class="service-name">Rubber base</h3>
+          <p class="service-desc">Recommended for strong and healthy nails. This service is an enhancement of the natural nail. Length can not be added. Nail art and designs are priced additionally.</p>
+          <p class="service-price">Starts at $25</p>
+        </div>
+      </div>
+
+      <!-- ── SERVICE 8 ─────────────────────────────────── -->
+      <div class="service-card" data-number="08">
+        <div class="service-img-wrap">
+          <img src="../assets/claunails.jpeg" alt="Service 8" class="service-img" />
+        </div>
+        <div class="service-body">
+          <h3 class="service-name">Acrygel</h3>
+          <p class="service-desc">Acrygel nails start at $35. Designs and nail art are priced additionally.</p>
+          <p class="service-price">Starts at $35</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       BOTTOM CTA
+       ============================================================ -->
+  <section class="cta-section">
+    <!-- EDIT: change background image -->
+    <div class="cta-bg" style="background-image: url('../assets/flower.jpg');"></div>
+    <div class="cta-content">
+      <!-- EDIT: CTA headline -->
+      <h2 class="cta-headline">Make an Appointment</h2>
+      <!-- EDIT: CTA body text -->
+      <p class="cta-body">
+DM me on Instagram to book your appointment or ask any questions you may have!
+      </p>
+      <!-- EDIT: button text + link -->
+      <a href="https://www.instagram.com/alexa_naills/" class="cta-btn">INQUIRE NOW</a>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <!-- EDIT: brand name -->
+    <p class="footer-brand">Alexa Nails</p>
+    <!-- EDIT: email -->
+    <a href="mailto:youremail@email.com" class="footer-email">@alexa_naills on Instagram</a>
+  </footer>
+
+
+  <script>
+    // Hero text fades in on load
+    window.addEventListener('load', () => {
+      document.querySelector('.fade-in-hero').classList.add('visible');
+    });
+
+    // Service cards fade up as they scroll into view
+    const cards = document.querySelectorAll('.service-card');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('card-visible'), i * 90);
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    cards.forEach(c => io.observe(c));
+  </script>
 
 </body>
-<script>
-  const carouselInner = document.querySelector('.carousel-inner');
-  const dots = document.querySelectorAll('.dot');
-  const leftArrow = document.querySelector('.left-arrow');
-  const rightArrow = document.querySelector('.right-arrow');
-  let currentSlide = 0;
-  const totalSlides = 4;
-
-  function updateDots() {
-    dots.forEach((dot, index) => {
-      dot.classList.toggle('active', index === currentSlide);
-    });
-  }
-
-  function goToSlide(slideIndex) {
-    currentSlide = slideIndex;
-    const translateX = -25 * currentSlide;
-    carouselInner.style.transform = `translateX(${translateX}%)`;
-    updateDots();
-  }
-
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    goToSlide(currentSlide);
-  }
-
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    goToSlide(currentSlide);
-  }
-
-  dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-      goToSlide(index);
-    });
-  });
-
-  leftArrow.addEventListener('click', prevSlide);
-  rightArrow.addEventListener('click', nextSlide);
-
-  // Auto slide every 10 seconds
-  setInterval(nextSlide, 20000);
-</script>
 </html>

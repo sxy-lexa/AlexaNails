@@ -1,19 +1,53 @@
-/* Nav Bar */
+/* Color Variables - Luxurious Neutral Palette */
+:root {
+    --white: #ffffff;
+    --pearl: #FAF8F5;
+    --khaki: #DFDACF;
+    --taupe: #A3968D;
+    --cacao: #4D403A;
+    --leather: #262626;
+    --gold-accent: #C9A675;
+
+    /* Home page specific variables */
+    --color-white:       #FFFFFF;
+    --color-pearl:       #FAF8F5;
+    --color-khaki:       #DFDACF;
+    --color-taupe:       #A3968D;
+    --color-cacao:       #4D403A;
+    --color-leather:     #262626;
+
+    /* Mapped old variables to new palette for backgrounds and text */
+    --color-black:       var(--color-pearl);  /* Hero background: pearl */
+    --color-dark:        var(--color-khaki);  /* Story background: khaki */
+    --color-olive:       var(--color-taupe);  /* Meet background: taupe */
+    --color-olive-dark:  var(--color-cacao);
+    --color-gold:        var(--color-taupe);
+    --color-text-light:  var(--color-cacao);  /* Text: darker cacao */
+    --color-ticker-bg:   var(--color-khaki);  /* Ticker: khaki */
+
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body:    'Montserrat', sans-serif;
+
+    --nav-height: 60px;
+}
+
+/* Nav Bar - Keeping your original navigation */
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0px;
     overflow: hidden;
-    background: linear-gradient(135deg, var(--light-brown), var(--white));
+    background: linear-gradient(135deg, rgba(255,255,255,0.75), rgba(163,150,141,0.35));
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+    font-family: 'Montserrat', sans-serif;
     position: relative;
-  }
-  
-  ul::before {
+    z-index: 1000;
+}
+
+ul::before {
     content: '';
     position: absolute;
     top: 0;
@@ -22,517 +56,506 @@ ul {
     bottom: 0;
     background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent);
     pointer-events: none;
-  }
-  
-  li {
+}
+
+li {
     float: left;
     position: relative;
-  }
-  
-  li a {
+}
+
+li a {
     display: block;
-    color: var(--cream);
+    color: var(--color-leather);
     text-align: center;
     padding: 18px 20px;
     text-decoration: none;
-    font-weight: 600;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     transition: all 0.3s ease;
     position: relative;
     z-index: 1;
-  }
-  
-  li a:hover {
-    color: var(--medium-brown);
+}
+
+li a:hover {
+    color: var(--color-taupe);
     transform: translateY(-2px);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  }
-  
-  li a::after {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+li a::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 50%;
     width: 0;
     height: 2px;
-    background: var(--medium-brown);
+    background: var(--color-taupe);
     transition: all 0.3s ease;
     transform: translateX(-50%);
-  }
-  
-  li a:hover::after {
-    width: 100%;
-  }
+}
 
-  li i {
-    color: var(--cream);
+li a:hover::after {
+    width: 100%;
+}
+
+li i {
+    color: var(--color-pearl);
     font-size: 28px;
     padding: 0 25px;
     transition: all 0.3s ease;
     position: relative;
     z-index: 1;
-  }
-  
-  li i:hover {
-    color: var(--medium-brown);
+}
+
+li i:hover {
+    color: var(--color-cacao);
     transform: scale(1.1);
-    text-shadow: 0 0 10px rgba(205, 133, 63, 0.5);
-  }
-
-  body {
-    font-family: Times, Times New Roman, serif;
-    color: var(--dark-brown);
-  background-image: url(./assets/megan.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color:var(--cream);
-  padding: 0px;
-  margin: 0px;
-  }
-
-  
-:root{
---white: #ffffff;
---light-brown: #c4a484;
---brown: #a0522d;
---dark-brown: #654321;
-}
-
-html{
-  padding:0px;
-  margin: 0px;
+    text-shadow: 0 0 10px rgba(77, 64, 58, 0.35);
 }
 
 
 
-/* page */
 
 
 
-/* reset and ensure no unexpected page offset */
+
+
+
+
+
+
+
+/* Claude */
+/* ================================================================
+   about.css — Services Page
+   Colour scheme: warm whites, creams, light browns, neutrals
+   ================================================================ */
+
+/* ----------------------------------------------------------------
+   CSS VARIABLES — Edit to tweak the whole colour scheme at once
+   ---------------------------------------------------------------- */
+:root {
+  --bg-page:        #ffffff;
+  --bg-intro:       #f8f8f8;
+  --bg-card:        #ffffff;
+  --bg-ticker:      #f0f0f0;
+  --bg-footer:      #fafafa;
+
+  --text-dark:      #1a1a1a;
+  --text-mid:       #666666;
+  --text-light:     #999999;
+
+  --accent-brown:   #d5d5d5;
+  --accent-tan:     #e0e0e0;
+  --accent-line:    #ebebeb;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Montserrat', sans-serif;
+}
+
+/* ----------------------------------------------------------------
+   RESET & BASE
+   ---------------------------------------------------------------- */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
 body {
-    margin: 0;
+  background: var(--bg-page);
+  color: var(--text-dark);
+  font-family: var(--font-body);
+  font-weight: 300;
+  overflow-x: hidden;
 }
 
+img { display: block; max-width: 100%; object-fit: cover; }
+a   { text-decoration: none; color: inherit; }
 
-/* Carousel Styles */
-.carousel {
+
+/* ================================================================
+   HERO VIDEO SECTION
+   ================================================================ */
+.hero-video-section {
   position: relative;
   width: 100%;
-  height: calc(100vh - 60px); /* Adjust based on nav height */
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  left: 0;
-}
-
-
-.carousel-inner {
+  height: 100vh;
+  min-height: 600px;
   display: flex;
-  width: 400%; /* 4 slides */
-  height: 100%;
-  transition: transform 0.5s ease; /* Smooth transition */
-  position: relative;
-  left: 0;
-  margin: 0;
-  padding: 0;
-}
-
-
-.slide {
-  width: 25%; /* 100% / 4 */
-  height: 100%;
-  display: flex;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  flex-shrink: 0;
-}
-
-
-.slide-image {
-  width: 50%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-
-.slide-text {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 2rem;
-  background: linear-gradient(135deg, var(--beige), var(--light-brown));
-  color: var(--dark-brown);
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  /* EDIT: increase brightness (e.g. 0.85) to show more of the flower */
+  filter: brightness(0.78) saturate(0.9);
+}
+
+/* Soft warm overlay */
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(250, 248, 245, 0.15) 0%,
+    rgba(250, 248, 245, 0.25) 55%,
+    rgba(44,  37,  32,  0.45) 100%
+  );
+  z-index: 1;
+}
+
+/* Hero text — starts invisible, JS fades it in */
+.hero-video-content {
   position: relative;
   z-index: 2;
-  box-sizing: border-box;
+  text-align: center;
+  padding: 0 24px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+.hero-video-content.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-
-.slide-text h3,
-.slide-text h1,
-.slide-text p,
-.slide-text .carousel-btn {
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-.slide-text h3 {
-  font-size: 20px;
+/* EDIT: small pre-label */
+.hero-pre {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin: 0 0 1rem 0;
-  font-weight: 400;
+  color: #fff;
+  opacity: 0.85;
+  margin-bottom: 10px;
 }
 
+/* EDIT: main hero headline */
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(56px, 9.5vw, 115px);
+  font-weight: 300;
+  font-style: italic;
+  color: #fff;
+  line-height: 0.93;
+  letter-spacing: 0.01em;
+  margin-bottom: 18px;
+  text-shadow: 0 2px 30px rgba(44, 37, 32, 0.25);
+}
 
-.slide-text h1 {
-  font-size: 50px;
-  line-height: 55px;
-  font-weight: 400;
+/* EDIT: tagline */
+.hero-tagline {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
-  margin: 0 0 1rem 0;
+  color: #fff;
+  opacity: 0.8;
 }
 
-
-.slide-text p {
-  font-size: 18px;
-  line-height: 24px;
-  margin: 0 0 2rem 0;
-}
-
-
-.carousel-btn {
-  background: var(--medium-brown);
-  border: 2px solid var(--medium-brown);
-  color: var(--cream);
-  padding: 1rem 2rem;
-  font-size: 16px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-
-.carousel-btn:hover {
-  background: transparent;
-  color: var(--medium-brown);
-}
-
-
-.carousel-arrow {
+/* Gentle scroll-down arrow */
+.hero-video-section::after {
+  content: '↓';
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(205, 133, 63, 0.8);
-  border: none;
-  color: var(--cream);
-  font-size: 24px;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 3;
-  transition: all 0.3s ease;
-  border-radius: 50%;
+  font-size: 18px;
+  color: #fff;
+  opacity: 0.45;
+  animation: bounce 2.2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0);   }
+  50%       { transform: translateX(-50%) translateY(7px); }
+}
+
+
+/* ================================================================
+   TICKER BAND
+   ================================================================ */
+.ticker-wrap {
+  background: var(--bg-ticker);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 12px 0;
+  border-top: 1px solid var(--accent-line);
+  border-bottom: 1px solid var(--accent-line);
+}
+
+.ticker-track {
+  display: inline-block;
+  animation: ticker-scroll 30s linear infinite;
+}
+
+.ticker-track span {
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  margin: 0 18px;
+}
+.ticker-track .dot {
+  color: var(--accent-brown);
+  font-size: 8px;
+  margin: 0 4px;
+  opacity: 0.8;
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+
+/* ================================================================
+   INTRO TEXT SECTION
+   ================================================================ */
+.intro-section {
+  background: var(--bg-intro);
+  text-align: center;
+  padding: 80px 20px 72px;
+  border-bottom: 1px solid var(--accent-line);
+}
+
+.intro-label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent-brown);
+  margin-bottom: 14px;
+}
+
+.intro-headline {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5.5vw, 68px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text-dark);
+  line-height: 1.05;
+  margin-bottom: 22px;
+  letter-spacing: 0.02em;
+}
+
+.intro-body {
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--text-mid);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+
+/* ================================================================
+   SERVICES GRID
+   ================================================================ */
+.services-section {
+  background: var(--bg-page);
+  padding: 70px 5vw 90px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.service-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--accent-line);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease, box-shadow 0.35s ease;
+}
+.service-card.card-visible { opacity: 1; transform: translateY(0); }
+.service-card:hover { box-shadow: 0 10px 40px rgba(155,125,101,0.14); }
+
+.service-card::before {
+  content: attr(data-number);
+  position: absolute;
+  top: 14px; right: 16px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--accent-tan);
+  z-index: 3;
+  letter-spacing: 0.05em;
+}
+
+.service-img-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 72%;
+  overflow: hidden;
+}
+
+.service-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.65s ease;
+  filter: saturate(0.92);
+}
+.service-card:hover .service-img { transform: scale(1.05); filter: saturate(1); }
+
+.service-body {
+  padding: 24px 26px 28px;
+  border-top: 2px solid var(--accent-tan);
+}
+
+/* EDIT: service name */
+.service-name {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+}
+
+/* EDIT: description */
+.service-desc {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--text-mid);
+  margin-bottom: 14px;
+  letter-spacing: 0.03em;
+}
+
+/* EDIT: price — remove the <p class="service-price"> in HTML to hide */
+.service-price {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-brown);
+}
+
+
+/* ================================================================
+   BOTTOM CTA
+   ================================================================ */
+.cta-section {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 80px 20px;
 }
 
-
-.carousel-arrow:hover {
-  background: var(--medium-brown);
-  transform: translateY(-50%) scale(1.1);
-}
-
-
-.left-arrow {
-  left: 20px;
-}
-
-
-.right-arrow {
-  right: 20px;
-}
-
-
-.carousel-dots {
+.cta-bg {
   position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  z-index: 3;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.35) saturate(0.7);
 }
 
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(205, 133, 63, 0.5);
-  margin: 0 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+.cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(250,248,245,0.08);
+  z-index: 1;
 }
 
+.cta-content { position: relative; z-index: 2; max-width: 540px; }
 
-.dot.active {
-  background: var(--medium-brown);
+.cta-headline {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5.5vw, 64px);
+  font-weight: 300;
+  font-style: italic;
+  color: #fff;
+  margin-bottom: 18px;
+  line-height: 1.05;
 }
 
-
-/* center hero text horizontally and vertically */
-.hero_image {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* vertical centering */
-    align-items: center;     /* horizontal centering */
-    text-align: center;
-    height: calc(100vh - 60px); /* subtract approximate nav height; adjust 60px if needed */
-    padding: 2rem; /* breathing room on small screens */
-    box-sizing: border-box;
-    /* optional background settings if you add an image later */
-    background-size: cover;
-    background-position: center;
+.cta-body {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 32px;
 }
 
-
-/* optional: make headings visually balanced */
-.hero_image h1 {
-    margin: 0 0 0.5rem 0;
-    font-size: clamp(1.5rem, 4vw, 3rem);
-    color: var(--dark-brown);
+.cta-btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.6);
+  padding: 13px 36px;
+  transition: background 0.25s, color 0.25s;
 }
-.hero_image h2 {
-    margin: 0;
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-    font-weight: 400;
-    line-height: 1.25;
-    color: var(--light-brown);
-}
+.cta-btn:hover { background: #fff; color: var(--text-dark); }
 
 
-/* ==========================================
-   MOBILE RESPONSIVE STYLES
-   ========================================== */
-
-
-/* Tablet and smaller screens */
-@media screen and (max-width: 768px) {
- 
-  /* Navigation - stack vertically on mobile */
-  ul {
-    flex-direction: column;
-    padding: 10px 0;
-  }
- 
-  ul > div:first-child {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-  }
- 
-  li {
-    float: none;
-  }
- 
-  li a {
-    padding: 12px 15px;
-  }
- 
-  li i {
-    padding: 10px 15px;
-  }
- 
-  /* Carousel - stack image and text vertically */
-  .carousel {
-    height: auto;
-    min-height: 500px;
-  }
- 
-  .slide {
-    flex-direction: column;
-  }
- 
-  .slide-image {
-    width: 100%;
-    height: 300px;
-  }
- 
-  .slide-text {
-    width: 100%;
-    height: auto;
-    padding: 2rem 1.5rem;
-  }
- 
-  .slide-text h3 {
-    font-size: 16px;
-  }
- 
-  .slide-text h1 {
-    font-size: 32px;
-    line-height: 38px;
-  }
- 
-  .slide-text p {
-    font-size: 16px;
-    line-height: 22px;
-  }
- 
-  .carousel-btn {
-    padding: 0.8rem 1.5rem;
-    font-size: 14px;
-  }
- 
-  .carousel-arrow {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-  }
- 
-  .left-arrow {
-    left: 10px;
-  }
- 
-  .right-arrow {
-    right: 10px;
-  }
- 
-  /* Hero section */
-  .hero_image {
-    height: auto;
-    min-height: 50vh;
-    padding: 3rem 1.5rem;
-  }
+/* ================================================================
+   FOOTER
+   ================================================================ */
+.site-footer {
+  background: var(--bg-footer);
+  text-align: center;
+  padding: 38px 20px;
+  border-top: 1px solid var(--accent-line);
 }
 
-
-/* Mobile phones */
-@media screen and (max-width: 480px) {
- 
-  li a {
-    padding: 10px 12px;
-    font-size: 12px;
-  }
- 
-  li i {
-    font-size: 22px;
-    padding: 8px 12px;
-  }
- 
-  .carousel {
-    min-height: 450px;
-  }
- 
-  .slide-image {
-    height: 250px;
-  }
- 
-  .slide-text {
-    padding: 1.5rem 1rem;
-  }
- 
-  .slide-text h3 {
-    font-size: 14px;
-  }
- 
-  .slide-text h1 {
-    font-size: 24px;
-    line-height: 28px;
-  }
- 
-  .slide-text p {
-    font-size: 14px;
-    line-height: 20px;
-  }
- 
-  .carousel-btn {
-    padding: 0.6rem 1.2rem;
-    font-size: 13px;
-  }
- 
-  .carousel-arrow {
-    width: 35px;
-    height: 35px;
-    font-size: 16px;
-  }
- 
-  .left-arrow {
-    left: 5px;
-  }
- 
-  .right-arrow {
-    right: 5px;
-  }
- 
-  .dot {
-    width: 10px;
-    height: 10px;
-    margin: 0 4px;
-  }
- 
-  .hero_image {
-    padding: 2rem 1rem;
-    min-height: 40vh;
-  }
+.footer-brand {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  opacity: 0.75;
 }
 
-
-/* Landscape orientation for mobile */
-@media screen and (max-height: 500px) and (orientation: landscape) {
- 
-  .carousel {
-    height: auto;
-  }
- 
-  .slide {
-    flex-direction: row;
-  }
- 
-  .slide-image {
-    width: 50%;
-    height: 100vh;
-  }
- 
-  .slide-text {
-    width: 50%;
-    height: 100vh;
-    padding: 1rem;
-  }
- 
-  .slide-text h3 {
-    font-size: 14px;
-    margin: 0 0 0.5rem 0;
-  }
- 
-  .slide-text h1 {
-    font-size: 24px;
-    line-height: 28px;
-    margin: 0 0 0.5rem 0;
-  }
- 
-  .slide-text p {
-    font-size: 14px;
-    line-height: 18px;
-    margin: 0 0 1rem 0;
-  }
- 
-  .hero_image {
-    min-height: 100vh;
-  }
+.footer-email {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--accent-brown);
+  transition: opacity 0.2s;
 }
+.footer-email:hover { opacity: 0.7; }
 
 
-
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+@media (max-width: 768px) {
+  .services-grid { grid-template-columns: 1fr; gap: 20px; }
+  .services-section { padding: 50px 5vw 70px; }
+  .service-body { padding: 20px 20px 24px; }
+}
