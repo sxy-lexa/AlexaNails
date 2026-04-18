@@ -43,7 +43,8 @@ ul {
     justify-content: space-between;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
     font-family: 'Montserrat', sans-serif;
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 
